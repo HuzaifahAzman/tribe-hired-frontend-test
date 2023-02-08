@@ -9,7 +9,11 @@ import {
   IconButton,
   TextField,
   Button,
-  Grid
+  Stack,
+  Grid,
+  CardContent,
+  Card,
+  Typography
 } from '@mui/material';
 
 const Post = () => {
@@ -99,49 +103,65 @@ const Post = () => {
 
         <h3>Comments</h3>
 
-        <form onSubmit={handleSubmit}>
-          <Grid>
-            <Grid item>
-              <TextField
-                  id="name"
-                  name="name"
-                  label="Name"
-                  type="text"
-                  value={formValues.name}
-                  onChange={handleInputChange}
-              />
-            </Grid>
-            <Grid item>
-              <TextField
-                  id="email"
-                  name="email"
-                  label="Email"
-                  type="text"
-                  value={formValues.email}
-                  onChange={handleInputChange}
-              />
-            </Grid>
-            <Grid item>
-              <TextField
-                  id="body"
-                  name="body"
-                  label="Body"
-                  type="text"
-                  value={formValues.body}
-                  onChange={handleInputChange}
-              />
-            </Grid>
-            <Grid item>
-              <Button variant="contained" color="primary" type="submit">
-                  Submit
-              </Button>
-              <Button variant="contained" color="error" onClick={() => setFilteredComments(comments)}>
-                  Reset
-              </Button>
-            </Grid>
-          </Grid>
-        </form>
+        <Card>
+          <CardContent>
+            <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+              Filter
+            </Typography>
+            <form onSubmit={handleSubmit}>
+              <Grid>
+                <Grid item>
+                  <TextField
+                    fullWidth
+                    id="name"
+                    name="name"
+                    label="Name"
+                    type="text"
+                    value={formValues.name}
+                    onChange={handleInputChange}
+                  />
+                </Grid>
+                <br />
+                <Grid item>
+                  <TextField
+                    fullWidth
+                    id="email"
+                    name="email"
+                    label="Email"
+                    type="text"
+                    value={formValues.email}
+                    onChange={handleInputChange}
+                  />
+                </Grid>
+                <br />
+                <Grid item>
+                  <TextField
+                    fullWidth
+                    id="body"
+                    name="body"
+                    label="Body"
+                    type="text"
+                    value={formValues.body}
+                    onChange={handleInputChange}
+                  />
+                </Grid>
+                <br />
+                <Grid item>
+                <Stack spacing={2} direction="row">
+                  <Button variant="contained" color="primary" type="submit">
+                      Submit
+                  </Button>
+                  <Button variant="outlined" color="error" onClick={() => setFilteredComments(comments)}>
+                      Reset
+                  </Button>
+                </Stack>
+                </Grid>
+              </Grid>
+            </form>
+          </CardContent>
+        </Card>
 
+        <br />
         {filteredComments?.length > 0 ?
           <CommentList comments={filteredComments}/>
           : "Loading..."
