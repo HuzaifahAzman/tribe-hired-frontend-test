@@ -7,7 +7,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 
 interface ICommentList {
-  comments: any;
+  comments: any[];
 }
 
 export class CommentList extends Component<ICommentList> {

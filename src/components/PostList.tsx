@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import { Link } from "react-router-dom";
 
 interface IPostList {
-  posts: any;
+  posts: any[];
   disableLink?: boolean;
 }
 
