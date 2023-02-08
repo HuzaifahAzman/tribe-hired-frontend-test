@@ -4,6 +4,8 @@ import Container from '@mui/material/Container';
 import PostList from '../components/PostList';
 import CommentList from '../components/CommentList';
 import { useSearchParams } from "react-router-dom";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import IconButton from '@mui/material/IconButton';
 
 const Post = () => {
   const [post, setPost] = useState<any>(null);
@@ -37,9 +39,14 @@ const Post = () => {
   return (
     <>
       <Container maxWidth="sm">
-        <h1>{`Post ${postId}`}</h1>
+        <h1>
+          <IconButton aria-label="Back" onClick={() => window.location.href = './'}>
+            <ArrowBackIcon fontSize="large" />
+          </IconButton>Home {`Post ${postId}`}
+        </h1>
+        
         {post ?
-          <PostList posts={[post]}/>
+          <PostList posts={[post]} disableLink={false} />
           : "Loading..."
         }
 

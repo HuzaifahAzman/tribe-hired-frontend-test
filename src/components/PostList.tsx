@@ -9,11 +9,13 @@ import { Link } from "react-router-dom";
 
 interface IPostList {
   posts: any;
+  disableLink?: boolean;
 }
 
 export class PostList extends Component<IPostList> {
   render() {
     const posts = this.props.posts;
+    const disableLink = this.props.disableLink;
     return (
       <>
         {posts?.length > 0 ? 
@@ -21,7 +23,7 @@ export class PostList extends Component<IPostList> {
             <List style={{ background: '#f2f6fc', maxHeight: 500, overflow: 'auto' }}>
               {posts.map((post:any) => (
                 <>
-                  <ListItemButton component={Link} to={`/post?postId=${post.id}`}>
+                  <ListItemButton component={Link} to={`/post?postId=${post.id}`} disabled={disableLink ?? false}>
                     <ListItemAvatar>
                       <Avatar>{post.userId}</Avatar>
                     </ListItemAvatar>
