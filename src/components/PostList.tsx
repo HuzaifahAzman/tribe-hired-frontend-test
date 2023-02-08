@@ -35,7 +35,7 @@ export class PostList extends Component<IPostList> {
               ))}
             </List>
           </>
-          : "Loading..."
+          : ""
         }
       </>
     )
