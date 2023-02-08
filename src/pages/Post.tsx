@@ -93,7 +93,8 @@ const Post = () => {
         <h1>
           <IconButton aria-label="Back" onClick={() => window.location.href = './'}>
             <ArrowBackIcon fontSize="large" />
-          </IconButton>Home {`Post ${postId}`}
+          </IconButton>
+          {`Post ${postId}`}
         </h1>
         
         {post ?
