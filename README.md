@@ -12,8 +12,7 @@ Clone the repository into your local
 
 Install all the dependencies for the project
 
-### `npm start`
-### `npm start-linux` (for linux environment)
+### `npm start` or `npm start-linux` (for linux environment)
 
 Runs the app in the development mode.\
 Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
