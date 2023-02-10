@@ -15,7 +15,7 @@ Install all the dependencies for the project
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 ## Screenshots
 
@@ -25,7 +25,7 @@ A page that displays a scrollable lists of posts. Each posts are packed with an 
 
 Each posts are clickable which will redirect users to the Post page parsing postId as the URL parameter.
 
-![alt text](/public/screenshots/homepage.png)
+![homepage](/public/screenshots/homepage.png)
 
 ### Post Page
 
@@ -35,5 +35,5 @@ The page is equipped with a back icon button which it will redirects the user to
 
 The comments are able to be filtered with the form with 3 inputs; name, email, body. 
 
-![alt text](/public/screenshots/post1.png)
-![alt text](/public/screenshots/post2.png)
+![postpage1](/public/screenshots/post1.png)
+![postpage2](/public/screenshots/post2.png)
